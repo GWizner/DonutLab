@@ -1,0 +1,10 @@
+<p>{{donutDetails.name}}</p>
+<p>{{donutDetails.calories}}</p>
+<p>{{donutDetails.extras}}</p>
+<img src="{{donutDetails.photo}}" width="100">
+<br />
+<a href="{{donutDetails.photo_attribution}}">{{donutDetails.photo_attribution}}</a>
+<br />
+<br />
+<button class="btn btn-primary" (click)="BuyDonut(donutDetails.id)">Buy this donut</button>
+<!--<button class="btn btn-primary" (click)="RemoveDonut(donutDetails.id)">Remove</button>-->

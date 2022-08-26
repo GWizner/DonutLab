@@ -1,0 +1,26 @@
+<h1>CART</h1>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="cartDetailsDisplay">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Calories</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let currCartDetails  of cartDetailsDisplay.theseDonutDetails">
+      <td>{{ currCartDetails.name }}</td>
+      <td>{{ cartDetailsDisplay.thisDonutPrice }}</td>
+      <td>{{ currCartDetails.calories }}</td>
+      <td><button class="btn btn-primary" (click)="thisRemoveDonut(currCartDetails.id)">Remove</button></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Total</td>
+      <td>{{ cartDetailsDisplay.thisPriceTotal }}</td>
+      <td>{{ cartDetailsDisplay.thisCalorieCount }}</td>
+    </tr>
+  </tbody>
+</table>

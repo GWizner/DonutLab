@@ -1,0 +1,10 @@
+<h1>Donuts</h1>
+
+<!--<button class="btn btn-primary" (click)="GetDonut()">Get Donuts</button>
+<br />
+<br />-->
+<ul *ngFor="let currLoadedDonut of loadedDonuts">
+  <li><a [routerLink]="['/donut-display', currLoadedDonut.id]">{{currLoadedDonut.name}}</a>&nbsp;&nbsp;$1.00</li>
+</ul>
+
+
